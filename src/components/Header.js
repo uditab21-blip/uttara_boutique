@@ -42,13 +42,18 @@ export default function Header() {
     <header className="bg-maroon-500 text-cream-500 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-gold-500 text-2xl md:text-3xl font-serif font-bold tracking-wider">
-              Uttara
-            </span>
-            <span className="text-cream-500 text-sm md:text-base font-light italic hidden sm:inline">
-              Boutique
+          {/* Logo & Branding */}
+          <Link href="/" className="flex flex-col items-start">
+            <div className="flex items-center space-x-2">
+              <span className="text-gold-500 text-2xl md:text-3xl font-serif font-bold tracking-wider">
+                Uttara
+              </span>
+              <span className="text-cream-500 text-sm md:text-base font-light italic">
+                Boutique
+              </span>
+            </div>
+            <span className="text-cream-300 text-xs md:text-sm font-light italic tracking-wide mt-0.5 hidden sm:block">
+              Bengal&apos;s Finest Weaves, Reimagined
             </span>
           </Link>
 
@@ -60,14 +65,17 @@ export default function Header() {
             <Link href="/products" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
               Collection
             </Link>
-            <Link href="/products?category=bridal" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
-              Bridal
+            <Link href="/products?category=dhakai-jamdani" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
+              Jamdani
             </Link>
-            <Link href="/products?category=festival" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
-              Festival
+            <Link href="/products?category=baluchari" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
+              Baluchari
             </Link>
-            <Link href="/products?category=everyday" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
-              Everyday
+            <Link href="/products?category=tant" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
+              Tant
+            </Link>
+            <Link href="/products?category=gorod" className="text-cream-100 hover:text-gold-500 transition-colors text-sm uppercase tracking-wider font-medium">
+              Gorod
             </Link>
           </nav>
 
@@ -113,14 +121,17 @@ export default function Header() {
               <Link href="/products" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
                 Collection
               </Link>
-              <Link href="/products?category=bridal" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
-                Bridal
+              <Link href="/products?category=dhakai-jamdani" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
+                Dhakai Jamdani
               </Link>
-              <Link href="/products?category=festival" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
-                Festival
+              <Link href="/products?category=baluchari" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
+                Baluchari
               </Link>
-              <Link href="/products?category=everyday" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
-                Everyday
+              <Link href="/products?category=tant" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
+                Tant
+              </Link>
+              <Link href="/products?category=gorod" className="text-cream-100 hover:text-gold-500 px-2 py-1 text-sm uppercase tracking-wider" onClick={() => setMobileMenuOpen(false)}>
+                Gorod
               </Link>
             </div>
           </nav>

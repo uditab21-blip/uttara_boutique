@@ -8,24 +8,24 @@ export default function HeroBanner() {
 
   const slides = [
     {
-      title: 'Timeless Elegance',
-      subtitle: 'Discover our curated bridal collection',
-      cta: 'Explore Bridal',
-      link: '/products?category=bridal',
+      title: 'Dhakai Jamdani',
+      subtitle: 'Sheer muslin woven with celestial patterns — the pride of Bengal',
+      cta: 'Explore Jamdani',
+      link: '/products?category=dhakai-jamdani',
       bg: 'from-maroon-800 via-maroon-600 to-maroon-900',
     },
     {
-      title: 'Festival Splendor',
-      subtitle: 'Celebrate in style with handpicked festive sarees',
-      cta: 'Shop Festival',
-      link: '/products?category=festival',
+      title: 'Baluchari Silk',
+      subtitle: 'Story-woven silk from Murshidabad, steeped in tradition',
+      cta: 'View Baluchari',
+      link: '/products?category=baluchari',
       bg: 'from-saffron-700 via-saffron-500 to-saffron-800',
     },
     {
-      title: 'Everyday Grace',
-      subtitle: 'Effortless style for your daily elegance',
-      cta: 'View Everyday',
-      link: '/products?category=everyday',
+      title: 'Bengali Tant',
+      subtitle: 'Lightweight cotton elegance for every day',
+      cta: 'Shop Tant',
+      link: '/products?category=tant',
       bg: 'from-gold-700 via-gold-500 to-gold-800',
     },
   ];

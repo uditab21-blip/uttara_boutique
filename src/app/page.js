@@ -6,12 +6,14 @@ import { getProductsByCategory } from '@/lib/db';
 export const dynamic = 'force-dynamic';
 
 export default function HomePage() {
-  let bridalProducts = [];
-  let festivalProducts = [];
+  let jamdaniProducts = [];
+  let baluchariProducts = [];
+  let tantProducts = [];
   
   try {
-    bridalProducts = getProductsByCategory('bridal').slice(0, 3);
-    festivalProducts = getProductsByCategory('festival').slice(0, 3);
+    jamdaniProducts = getProductsByCategory('dhakai-jamdani').slice(0, 3);
+    baluchariProducts = getProductsByCategory('baluchari').slice(0, 3);
+    tantProducts = getProductsByCategory('tant').slice(0, 3);
   } catch (e) {
     console.error('Failed to load products:', e);
   }
@@ -20,6 +22,7 @@ export default function HomePage() {
     <>
       <HeroBanner />
 
+      {/* Trust Strip */}
       <div className="bg-maroon-50 border-y border-gold-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -33,7 +36,7 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <div className="text-gold-500 text-2xl mb-1">✦</div>
-              <p className="text-maroon-700 text-sm font-medium">Authentic Weaves</p>
+              <p className="text-maroon-700 text-sm font-medium">Authentic Bengal Weaves</p>
             </div>
             <div className="text-center">
               <div className="text-gold-500 text-2xl mb-1">✦</div>
@@ -43,42 +46,63 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Dhakai Jamdani Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex justify-between items-end mb-8">
           <div>
-            <h2 className="text-maroon-700 text-3xl font-serif font-bold">Bridal Collection</h2>
-            <p className="text-gray-500 mt-1">Timeless elegance for your special day</p>
+            <h2 className="text-maroon-700 text-3xl font-serif font-bold">Dhakai Jamdani</h2>
+            <p className="text-gray-500 mt-1">Sheer muslin woven with celestial patterns</p>
           </div>
-          <Link href="/products?category=bridal" className="text-gold-600 hover:text-gold-700 font-medium text-sm uppercase tracking-wider hidden sm:block">
+          <Link href="/products?category=dhakai-jamdani" className="text-gold-600 hover:text-gold-700 font-medium text-sm uppercase tracking-wider hidden sm:block">
             View All →
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {bridalProducts.map(product => (
+          {jamdaniProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
 
+      {/* Baluchari Section */}
       <section className="bg-cream-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-8">
             <div>
-              <h2 className="text-maroon-700 text-3xl font-serif font-bold">Festival Favorites</h2>
-              <p className="text-gray-500 mt-1">Celebrate in vibrant style</p>
+              <h2 className="text-maroon-700 text-3xl font-serif font-bold">Baluchari Silk</h2>
+              <p className="text-gray-500 mt-1">Story-woven silk from the looms of Murshidabad</p>
             </div>
-            <Link href="/products?category=festival" className="text-gold-600 hover:text-gold-700 font-medium text-sm uppercase tracking-wider hidden sm:block">
+            <Link href="/products?category=baluchari" className="text-gold-600 hover:text-gold-700 font-medium text-sm uppercase tracking-wider hidden sm:block">
               View All →
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {festivalProducts.map(product => (
+            {baluchariProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
       </section>
 
+      {/* Tant Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex justify-between items-end mb-8">
+          <div>
+            <h2 className="text-maroon-700 text-3xl font-serif font-bold">Bengali Tant</h2>
+            <p className="text-gray-500 mt-1">Lightweight cotton for everyday elegance</p>
+          </div>
+          <Link href="/products?category=tant" className="text-gold-600 hover:text-gold-700 font-medium text-sm uppercase tracking-wider hidden sm:block">
+            View All →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tantProducts.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
       <section className="bg-gradient-to-r from-maroon-700 to-maroon-500 py-16">
         <div className="max-w-3xl mx-auto text-center px-4">
           <h2 className="text-cream-500 text-3xl font-serif font-bold mb-4">

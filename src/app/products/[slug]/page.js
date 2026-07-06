@@ -96,7 +96,12 @@ export default function ProductDetailPage() {
         <span className="mx-2">/</span>
         <Link href="/products" className="hover:text-maroon-500">Products</Link>
         <span className="mx-2">/</span>
-        <Link href={`/products?category=${product.category}`} className="hover:text-maroon-500 capitalize">{product.category}</Link>
+        <Link href={`/products?category=${product.category}`} className="hover:text-maroon-500 capitalize">
+          {product.category === 'dhakai-jamdani' ? 'Dhakai Jamdani' : 
+           product.category === 'baluchari' ? 'Baluchari' :
+           product.category === 'tant' ? 'Tant' : 
+           product.category === 'gorod' ? 'Gorod' : product.category}
+        </Link>
         <span className="mx-2">/</span>
         <span className="text-maroon-700">{product.name}</span>
       </nav>
@@ -121,11 +126,15 @@ export default function ProductDetailPage() {
           </div>
           {/* Category Badge */}
           <span className={`absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-semibold capitalize
-            ${product.category === 'bridal' ? 'bg-gold-500 text-maroon-900' : ''}
-            ${product.category === 'festival' ? 'bg-saffron-500 text-white' : ''}
-            ${product.category === 'everyday' ? 'bg-cream-500 text-maroon-700' : ''}
+            ${product.category === 'dhakai-jamdani' ? 'bg-cream-500 text-maroon-700' : ''}
+            ${product.category === 'baluchari' ? 'bg-gold-500 text-maroon-900' : ''}
+            ${product.category === 'tant' ? 'bg-saffron-500 text-white' : ''}
+            ${product.category === 'gorod' ? 'bg-maroon-700 text-cream-500' : ''}
           `}>
-            {product.category}
+            {product.category === 'dhakai-jamdani' ? 'Dhakai Jamdani' : 
+             product.category === 'baluchari' ? 'Baluchari' :
+             product.category === 'tant' ? 'Tant' : 
+             product.category === 'gorod' ? 'Gorod' : product.category}
           </span>
         </div>
 

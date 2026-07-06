@@ -10,7 +10,7 @@
 | slug | TEXT (UNIQUE) | URL slug |
 | description | TEXT | Product description |
 | price | INTEGER | Price in INR |
-| category | TEXT | Category (bridal, festival, everyday) |
+| category | TEXT | Category (dhakai-jamdani, baluchari, tant, gorod) — Bengali handloom categories |
 | image_url | TEXT | Product image URL |
 | stock_quantity | INTEGER (default: 0) | Current stock level |
 | created_at | TEXT | ISO datetime |

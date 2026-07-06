@@ -1,27 +1,38 @@
 import ProductCard from '@/components/ProductCard';
 import { getAllProducts, getProductsByCategory } from '@/lib/db';
 
+function formatCategoryLabel(category) {
+  const labels = {
+    'dhakai-jamdani': 'Dhakai Jamdani',
+    'baluchari': 'Baluchari',
+    'tant': 'Tant',
+    'gorod': 'Gorod',
+  };
+  return labels[category] || category;
+}
+
 export default function ProductsPage({ searchParams }) {
   const category = searchParams.category;
   const products = category ? getProductsByCategory(category) : getAllProducts();
 
   const categories = [
     { id: 'all', label: 'All Saris', slug: '' },
-    { id: 'bridal', label: 'Bridal', slug: 'bridal' },
-    { id: 'festival', label: 'Festival', slug: 'festival' },
-    { id: 'everyday', label: 'Everyday', slug: 'everyday' },
+    { id: 'dhakai-jamdani', label: 'Dhakai Jamdani', slug: 'dhakai-jamdani' },
+    { id: 'baluchari', label: 'Baluchari', slug: 'baluchari' },
+    { id: 'tant', label: 'Tant', slug: 'tant' },
+    { id: 'gorod', label: 'Gorod', slug: 'gorod' },
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
         <h1 className="text-maroon-700 text-4xl font-serif font-bold">
-          {category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Our'} Collection
+          {category ? formatCategoryLabel(category) : 'Our'} Collection
         </h1>
         <p className="text-gray-500 mt-2">
           {category
-            ? `Explore our ${category} saree collection`
-            : 'Discover the finest handloom saris from across India'}
+            ? `Explore our ${formatCategoryLabel(category)} saree collection`
+            : 'Discover the finest Bengali handloom saris — Jamdani, Baluchari, Tant & Gorod'}
         </p>
       </div>
 
